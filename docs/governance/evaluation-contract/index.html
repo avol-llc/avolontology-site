@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AVOL Evaluation Contract — AVOL Governance</title>
-  <meta name="description" content="AVOL Evaluation Contract (HTML canonical; PDF reference artifact)." />
+  <title>AVOL™ Evaluation Contract — AVOL Governance</title>
+  <meta name="description" content="AVOL™ Evaluation Contract v1.0. Canonical HTML; PDFs are reference artifacts." />
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
@@ -19,34 +19,240 @@
 
   <main class="container">
     <section class="doc-header">
-      <h1>AVOL Evaluation Contract</h1>
+      <h1>AVOL™ — Evaluation Contract</h1>
 
-      <div class="notice">
-        <div><strong>Status:</strong> Normative</div>
-        <div><strong>Version:</strong> v1.0</div>
+      <div class="notice" role="note" aria-label="Canonical notice">
+        <div><strong>Status:</strong> Normative · Binding</div>
+        <div><strong>Version:</strong> 1.0</div>
+        <div><strong>Effective date:</strong> 09-January-2026</div>
         <div><strong>Canonical:</strong> This HTML page is the authoritative form of this document.</div>
         <div><strong>PDF:</strong> <a href="/governance/evaluation-contract/pdf/">Reference artifacts</a></div>
+        <div><strong>Governance stack:</strong> <a href="/governance/">/governance/</a></div>
       </div>
 
       <p class="muted">
-        Placeholder page. Canonical HTML content will be added here.
+        This Evaluation Contract defines the formal, binding specification governing how an AVOL evaluation
+        is formed, executed, interpreted, and relied upon.
       </p>
     </section>
 
     <section class="card">
-      <h2>In this document</h2>
-      <p class="muted">A table of contents will appear once the document is published as HTML.</p>
+      <h2>Contents</h2>
+      <ol class="stack">
+        <li><a href="#purpose-and-scope">Purpose and scope</a></li>
+        <li><a href="#definitions">Definitions</a></li>
+        <li><a href="#when-an-evaluation-exists">When an evaluation exists</a></li>
+        <li><a href="#inputs-and-preconditions">Inputs and preconditions</a></li>
+        <li><a href="#relationship-to-avol-base">Relationship to AVOL-Base and Declared Evaluation Context</a></li>
+        <li><a href="#determinism-and-canonicality">Determinism and canonical guarantees</a></li>
+        <li><a href="#versioning-and-rulesets">Versioning and ruleset stability</a></li>
+        <li><a href="#what-avol-guarantees">What AVOL guarantees</a></li>
+        <li><a href="#what-avol-does-not-guarantee">What AVOL does not guarantee</a></li>
+        <li><a href="#boundary-of-responsibility">Boundary of responsibility</a></li>
+        <li><a href="#machine-and-ai-reliance">Machine and AI reliance</a></li>
+        <li><a href="#legal-posture">Legal posture</a></li>
+        <li><a href="#explicit-prohibitions">Explicit prohibitions</a></li>
+        <li><a href="#contract-integrity">Contract integrity</a></li>
+      </ol>
+    </section>
+
+    <section class="card" id="purpose-and-scope">
+      <h2>1. Purpose and scope</h2>
+      <p>
+        This Evaluation Contract defines the formal, binding specification governing how an AVOL™
+        (Adaptive Value Ontology Layer) evaluation is formed, executed, and interpreted.
+      </p>
+      <p>This document is authoritative for determining:</p>
+      <ul class="bullets">
+        <li>What constitutes a valid AVOL evaluation</li>
+        <li>What inputs are admissible</li>
+        <li>Where AVOL responsibility terminates</li>
+        <li>What AVOL explicitly does not provide</li>
+        <li>What guarantees AVOL provides</li>
+        <li>How outputs may be relied upon</li>
+      </ul>
+      <p>
+        This Evaluation Contract extends but does not modify the Canonical Definition &amp; Scope
+        or the Declared Evaluation Context. All constraints and prohibitions therein are binding.
+      </p>
+    </section>
+
+    <section class="card" id="definitions">
+      <h2>2. Definitions</h2>
+
+      <h3>2.1 Evaluation</h3>
+      <p>
+        An Evaluation is a deterministic computational act performed by AVOL that transforms
+        a declared set of admissible inputs into a single, scalar, normalized value representation
+        using predefined conversion and aggregation rules.
+      </p>
+      <p>
+        An evaluation denotes a mechanical value translation process only and does not imply
+        judgment, assessment, suitability analysis, or decision-making of any kind.
+      </p>
+
+      <h3>2.2 Evaluation output</h3>
+      <p>
+        An Evaluation Output is the sole canonical artifact produced by an AVOL evaluation.
+      </p>
+      <p>It consists of:</p>
+      <ul class="bullets">
+        <li>A numeric scalar value representing aggregated cash-equivalent value</li>
+        <li>Metadata sufficient to identify declared context, ruleset version, and constants used</li>
+      </ul>
+      <p>
+        Associated metadata is descriptive only and does not expand the semantic meaning of the output.
+      </p>
+    </section>
+
+    <section class="card" id="when-an-evaluation-exists">
+      <h2>3. When an evaluation exists</h2>
+      <p>An AVOL evaluation exists if and only if all of the following conditions are satisfied:</p>
+      <ul class="bullets">
+        <li>A valid Declared Evaluation Context is specified</li>
+        <li>A versioned AVOL ruleset is specified</li>
+        <li>All required inputs are provided and valid</li>
+        <li>The evaluation is executed deterministically</li>
+      </ul>
+      <p>
+        If any condition is not met, no evaluation exists and no output is valid or authoritative.
+      </p>
+    </section>
+
+    <section class="card" id="inputs-and-preconditions">
+      <h2>4. Inputs and preconditions</h2>
+
+      <h3>4.1 Required inputs</h3>
+      <ul class="bullets">
+        <li>Option definition, including base price and admissible non-price components</li>
+        <li>Declared Evaluation Context</li>
+        <li>Ruleset version identifier</li>
+      </ul>
+
+      <h3>4.2 Optional inputs</h3>
+      <p>
+        AVOL does not accept optional inputs that alter computation. Any input not explicitly
+        declared as required is out of scope and ignored.
+      </p>
+
+      <h3>4.3 Missing or malformed inputs</h3>
+      <p>
+        AVOL will not infer, repair, substitute, or impute missing or malformed data.
+        Invalid evaluations must not produce numeric outputs.
+      </p>
+    </section>
+
+    <section class="card" id="relationship-to-avol-base">
+      <h2>5. Relationship to AVOL-Base and Declared Evaluation Context</h2>
+      <p>
+        AVOL-Base is the default, context-free instantiation of this Evaluation Contract.
+        Declared Evaluation Contexts are additive instantiations and do not mutate AVOL-Base.
+      </p>
+    </section>
+
+    <section class="card" id="determinism-and-canonicality">
+      <h2>6. Determinism and canonical guarantees</h2>
+      <p>
+        For identical inputs, declared context, and ruleset version, AVOL must always
+        produce identical outputs. No stochastic, adaptive, or probabilistic behavior is permitted.
+      </p>
+      <p>
+        Outputs are canonical representations of translated value components only.
+      </p>
+    </section>
+
+    <section class="card" id="versioning-and-rulesets">
+      <h2>7. Versioning and ruleset stability</h2>
+      <p>
+        Rulesets are published, versioned, immutable once declared, and selected externally
+        to AVOL. Outputs across ruleset versions are not equivalent.
+      </p>
+    </section>
+
+    <section class="card" id="what-avol-guarantees">
+      <h2>8. What AVOL guarantees</h2>
+      <ul class="bullets">
+        <li>Neutrality with respect to incentives, affiliations, and outcomes</li>
+        <li>Scope fidelity to declared, admissible inputs</li>
+        <li>Consistency and determinism</li>
+        <li>Arithmetic representation accuracy</li>
+      </ul>
+    </section>
+
+    <section class="card" id="what-avol-does-not-guarantee">
+      <h2>9. What AVOL does not guarantee</h2>
+      <ul class="bullets">
+        <li>Realization of any value or benefit</li>
+        <li>Future outcomes or optimality</li>
+        <li>Completeness beyond declared inputs</li>
+        <li>Accuracy of third-party data sources</li>
+      </ul>
+      <p>
+        AVOL does not rank, compare, recommend, predict, optimize, or advise.
+      </p>
+    </section>
+
+    <section class="card" id="boundary-of-responsibility">
+      <h2>10. Boundary of responsibility</h2>
+      <p>
+        AVOL responsibility terminates strictly at value representation.
+        Any downstream interpretation, ranking, or action is outside the AVOL boundary.
+      </p>
+    </section>
+
+    <section class="card" id="machine-and-ai-reliance">
+      <h2>11. Machine and AI reliance</h2>
+      <p>
+        Machines and AI agents may rely on AVOL outputs solely as canonical, deterministic
+        value representations and numeric inputs for downstream systems.
+      </p>
+      <p>
+        Outputs are context-bound and not portable across contexts or ruleset versions.
+      </p>
+    </section>
+
+    <section class="card" id="legal-posture">
+      <h2>12. Legal posture</h2>
+      <p>
+        AVOL outputs do not constitute advice of any kind and create no fiduciary duty
+        or economic guarantee.
+      </p>
+    </section>
+
+    <section class="card" id="explicit-prohibitions">
+      <h2>13. Explicit prohibitions</h2>
+      <ul class="bullets">
+        <li>Ranking or ordering of options</li>
+        <li>Recommendation or steering</li>
+        <li>Prediction or inference</li>
+        <li>Probabilistic or ML-based valuation</li>
+        <li>Personalization or user-specific weighting</li>
+        <li>Incentive-aware computation</li>
+      </ul>
+      <p>
+        Violation of any prohibition invalidates canonical compliance.
+      </p>
+    </section>
+
+    <section class="card" id="contract-integrity">
+      <h2>14. Contract integrity</h2>
+      <p>
+        This Evaluation Contract is binding on all AVOL evaluations.
+        Partial compliance is non-compliance.
+      </p>
     </section>
 
     <nav class="doc-footer-nav" aria-label="Governance stack navigation">
-      <a class="button subtle" href="/governance/">Back to governance hub</a>
+      <a class="button subtle" href="/governance/declared-evaluation-context/">Previous: Declared Evaluation Context</a>
+      <a class="button subtle" href="/governance/output-semantics/">Next: AVOL™ Output Semantics Specification</a>
     </nav>
 
     <footer class="site-footer">
       <div class="muted">
-        Governance Set: v1.0 (HTML canonical; PDFs reference)
+        © 2026 AVOL. All rights reserved. · Governance Set: v1.0 (HTML canonical; PDFs reference)
       </div>
     </footer>
   </main>
 </body>
 </html>
+
