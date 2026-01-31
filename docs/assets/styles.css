@@ -252,3 +252,22 @@ article.doc section.doc-subsubsection {
 .toc__list--numbered > li {
   padding-left: 0.4rem;
 }
+
+/* Numbered Contents lists: consistent look across all docs */
+.toc__list--numbered {
+  list-style: none;
+  padding-left: 1.5rem;   /* base indent — adjust once here */
+  margin-left: 0;
+}
+
+.toc__list--numbered li a {
+  display: grid;
+  grid-template-columns: 3ch auto; /* aligns 1–14 */
+  column-gap: 0.5rem;             /* controls space after the period */
+  text-decoration: none;
+}
+
+.toc__list--numbered .toc-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
