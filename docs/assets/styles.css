@@ -110,3 +110,12 @@ ul{
 .site-footer { padding: 20px 0 8px; }
 code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
+.doc-subsubsection h4 {
+  margin-bottom: 0.25rem;
+}
+
+.doc-subsubsection h4 + p {
+  margin-top: 0;
+}
+
+
