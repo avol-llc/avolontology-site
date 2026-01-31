@@ -1,5 +1,8 @@
 /governance/*/pdf
   X-Robots-Tag: noindex, follow
 
+/governance/*/pdf/
+  X-Robots-Tag: noindex, follow
+
 /governance/*/pdf/*
   X-Robots-Tag: noindex, follow
