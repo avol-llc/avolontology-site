@@ -124,3 +124,15 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
   margin-bottom: 0;
 }
 
+/* Governance docs: eliminate the "blank line" between numbered headings (h4) and the paragraph that follows */
+.doc .doc-subsubsection > h4 {
+  margin: 0 !important;
+}
+
+.doc .doc-subsubsection > h4 + p {
+  margin-top: 0 !important;
+}
+
+.doc .doc-subsubsection > p {
+  margin-bottom: 0.75rem; /* keep readable separation between numbered items */
+}
