@@ -206,3 +206,13 @@ article.doc section.doc-subsubsection {
   list-style-type: decimal;
 }
 
+/* Evaluation Contract only: match TOC indentation of other governance pages */
+.doc-eval-contract .toc__list {
+  padding-left: 2.25rem;      /* pushes the list right */
+  list-style-position: outside;
+}
+
+/* Keep decimal numbering visible */
+.doc-eval-contract .toc__list {
+  list-style-type: decimal;
+}
