@@ -219,7 +219,7 @@ article.doc section.doc-subsubsection {
 
 /* Evaluation Contract: align TOC indent with other docs */
 .doc-eval-contract .toc__list {
-  padding-left: 2.75rem;       /* increase as needed */
+  padding-left: 2.25rem;       /* increase as needed */
   margin-left: 0;              /* prevents extra left shift */
   list-style-position: outside;
 }
@@ -227,7 +227,7 @@ article.doc section.doc-subsubsection {
 /* Evaluation Contract: numbered TOC with aligned, clickable numbers */
 .doc-eval-contract .toc__list--numbered {
   list-style: none;            /* remove bullets */
-  padding-left: 2.75rem;       /* matches your other TOCs; adjust if needed */
+  padding-left: 2.25rem;       /* matches your other TOCs; adjust if needed */
   margin-left: 0;
 }
 
