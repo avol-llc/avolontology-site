@@ -179,3 +179,9 @@ article.doc section.doc-subsection {
 article.doc section.doc-subsubsection {
   margin-left: 2.5rem !important;
 }
+
+/* TOC: the link text already contains numbering; do not add list markers */
+.toc__list {
+  list-style: none;
+  padding-left: 0;
+}
