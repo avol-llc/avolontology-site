@@ -241,3 +241,11 @@ article.doc section.doc-subsubsection {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
+
+/* Numbered Contents lists: consistent indent across all numbered governance docs */
+.toc__list--numbered {
+  padding-left: 2.25rem;   /* adjust once here */
+  margin-left: 0;
+  list-style-position: outside;
+}
+
