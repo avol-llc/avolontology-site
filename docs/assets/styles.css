@@ -249,3 +249,6 @@ article.doc section.doc-subsubsection {
   list-style-position: outside;
 }
 
+.toc__list--numbered > li {
+  padding-left: 0.4rem;
+}
