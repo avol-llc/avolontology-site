@@ -189,3 +189,20 @@ article.doc section.doc-subsubsection {
 .toc__list {
   padding-left: 2.5rem;
 }
+
+/* Restore numbering for ordered Contents lists */
+.toc__list {
+  list-style-position: outside;
+  padding-left: 1.5rem; /* keep the same indentation you want */
+}
+
+.toc__list:where(ol),
+.toc__list ol {
+  list-style-type: decimal;
+}
+
+.toc__list:where(ol) > li,
+.toc__list ol > li {
+  list-style-type: decimal;
+}
+
