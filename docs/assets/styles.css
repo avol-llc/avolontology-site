@@ -152,3 +152,30 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
 .doc .doc-subsubsection {
   margin: 0 0 0.75rem 0 !important;
 }
+
+/* === Governance docs: tighten numbered sub-subsections (e.g., 2.3.2. + text) === */
+
+/* 1) Force the number heading and its following paragraph onto one line */
+article.doc section.doc-subsubsection > h4 {
+  display: inline !important;
+  margin: 0 !important;
+}
+
+article.doc section.doc-subsubsection > h4 + p {
+  display: inline !important;
+  margin: 0 !important;
+}
+
+/* 2) Add spacing AFTER the combined line item (not between number and text) */
+article.doc section.doc-subsubsection {
+  margin: 0 0 0.85rem 0 !important;
+}
+
+/* === Governance docs: hierarchical indentation === */
+article.doc section.doc-subsection {
+  margin-left: 1.25rem !important;
+}
+
+article.doc section.doc-subsubsection {
+  margin-left: 2.5rem !important;
+}
