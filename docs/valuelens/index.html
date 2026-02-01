@@ -4,10 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>ValueLens™ — What This Number Means</title>
+  <!-- Not a visible title section; this is only the browser tab / SEO title -->
+  <title>ValueLens™ — What This Figure Means</title>
   <link rel="canonical" href="https://avolontology.org/valuelens/" />
 
-  <meta name="description" content="Neutral explainer of what the ValueLens number represents and what it does not do." />
+  <meta name="description" content="Neutral explainer of what the ValueLens figure represents and what it does not do." />
   <meta name="robots" content="index,follow" />
 
   <style>
@@ -38,18 +39,10 @@
       padding: 2.25rem 1.25rem 3rem;
     }
 
-    /* Headings: slightly larger than body, neutral weight */
-    h1 {
-      font-size: 1.55rem;
-      font-weight: 650;
-      line-height: 1.25;
-      margin: 0 0 1rem 0;
-      letter-spacing: -0.01em;
-    }
-
+    /* All section headings identical size */
     h2 {
       font-size: 1.35rem;
-      font-weight: 650;
+      font-weight: 600;
       line-height: 1.25;
       margin: 0 0 0.75rem 0;
       letter-spacing: -0.01em;
@@ -60,19 +53,20 @@
       font-size: 1rem;
     }
 
+    /* Bullet lists — indented a bit more */
     ul {
-      margin: 0.5rem 0 1rem 1.15rem;
+      margin: 0.75rem 0 1rem 2rem;
       padding: 0;
     }
 
     li {
-      margin: 0.35rem 0;
+      margin: 0.4rem 0;
       font-size: 1rem;
     }
 
-    /* Section dividers (match governance-doc feel, but keep subtle) */
+    /* Section dividers */
     section {
-      padding: 1.75rem 0 1.75rem 0;
+      padding: 1.75rem 0;
       border-bottom: 1px solid var(--rule);
     }
 
@@ -84,41 +78,30 @@
       border-bottom: none;
       padding-bottom: 0;
     }
-
-    footer {
-      margin-top: 2.5rem;
-      padding-top: 1.25rem;
-      border-top: 1px solid var(--rule);
-    }
-
-    .revision-note {
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
   </style>
 </head>
 
 <body>
   <main>
-    <section aria-labelledby="what-the-valuelens-number-means">
-      <h1 id="what-the-valuelens-number-means">What The ValueLens™ Figure Means</h1>
-      <p>The ValueLens figure is a standardized representation of applicable non-price components associated with a purchasing option, expressed as a dollar-denominated number.</p>
+
+    <section aria-labelledby="what-the-valuelens-figure-means">
+      <h2 id="what-the-valuelens-figure-means">What the ValueLens™ Figure Means</h2>
+      <p>The ValueLens figure is a standardized representation of applicable non-price components associated with a purchasing option, expressed as a dollar-denominated figure.</p>
 
       <p>It is calculated using predefined, mathematically based rules applied to the option’s current value components known at the time of evaluation, which update as the underlying input values change.</p>
 
-      <p>The figure is generated mechanically and reflects a context-agnostic representation of value.  Value components associated with user-specific inputs or entitlements can be reflected when those inputs are supplied by the presenting platform.</p>
+      <p>The figure is generated mechanically and reflects a context-agnostic representation of value. Value components associated with user-specific inputs or entitlements can be reflected when those inputs are supplied by the presenting platform.</p>
     </section>
 
-    <section aria-labelledby="what-goes-into-the-valuelens-number">
-      <h2 id="what-goes-into-the-valuelens-number">What Goes Into The ValueLens™ Figure</h2>
+    <section aria-labelledby="what-goes-into-the-valuelens-figure">
+      <h2 id="what-goes-into-the-valuelens-figure">What Goes Into the ValueLens™ Figure</h2>
       <p>The ValueLens figure reflects quantifiable value components associated with an option, based on inputs that are measurable and known at the time an option is evaluated, such as:</p>
       <ul>
-            <li>Direct financial adjustments (cashback, rebates, credits, etc.)</li>
-            <li>Cost-related components (shipping charges, warranties, bundled services, etc.)</li>
-            <li>Included benefits or entitlements that carry measurable value</li>
-            <li>Loyalty points or rewards associated with the option</li>
-            <li>Other objectively quantifiable components that can be resolved at the time of evaluation</li>
+        <li>Direct financial adjustments (cashback, rebates, credits, etc.)</li>
+        <li>Cost-related components (shipping charges, warranties, bundled services, etc.)</li>
+        <li>Included benefits or entitlements that carry measurable value</li>
+        <li>Loyalty points or rewards associated with the option</li>
+        <li>Other objectively quantifiable components that can be resolved at the time of evaluation</li>
       </ul>
 
       <p>Component unit values are derived from verifiable, externally defined, and/or issuer-provided sources and updated to reflect current reference values.</p>
@@ -132,17 +115,18 @@
         <li>Rank or order options</li>
       </ul>
 
-      <p>The size of the ValueLens number does not, by itself, imply that one option should be selected over another.  Any comparison, sorting, or selection happens outside of ValueLens.</p>
+      <p>The size of the figure does not, by itself, imply that one option should be selected over another. Any comparison, sorting, or selection happens outside of ValueLens.</p>
     </section>
 
     <section aria-labelledby="in-short">
-      <h2 id="in-short">In Short:</h2>
-      <p>ValueLens makes certain value components visible in a consistent way.  How that information is used for evaluating an option is up to the person or system viewing it.</p>
+      <h2 id="in-short">In short</h2>
+      <p>ValueLens makes certain value components visible in a consistent way. How that information is used for evaluating an option is up to the person or system viewing it.</p>
     </section>
 
     <footer>
       <p class="revision-note">Last revised: 01-February-2026</p>
     </footer>
+    
   </main>
 </body>
 </html>
